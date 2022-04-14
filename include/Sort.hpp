@@ -20,7 +20,12 @@ class Sort {
         
         void initWindow();
         void draw();
-        void sort();
+        void swap(sf::RectangleShape *a, sf::RectangleShape *b);
+        int partition(int start, int end);
+        void changePositions();
+        bool isSorted(); 
+        void sort(int start, int end);
+        int getValue(sf::RectangleShape shape);
         int handleEvents();
         bool isOpen();
         int run();
