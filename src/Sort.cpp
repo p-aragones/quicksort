@@ -125,7 +125,6 @@ int Sort::run()
     draw();
     while (isOpen()) {
         handleEvents();
-        draw();
         if (!isSorted()) {
             sort(0, _values.size() - 1);
             changePositions();
