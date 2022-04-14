@@ -15,7 +15,7 @@ Sort::Sort()
     int x = 0;
     for (int i = 0; i < 100; i++) {
         sf::RectangleShape rect;
-        int height = rand() % (800 - 1 + 1) + 1;
+        int height = rand() % (799 - 1 + 1) + 1;
         rect.setOrigin(sf::Vector2f(0, height));
         rect.setFillColor(sf::Color::White);
         rect.setOutlineColor(sf::Color::White);
@@ -112,7 +112,7 @@ void Sort::changePositions()
 
 bool Sort::isSorted()
 {
-    for (int i = 0; i < _values.size() - 2; i++) {
+    for (int i = 0; i < _values.size() - 1; i++) {
        if (getValue(_values[i]) > getValue(_values[i + 1])){ 
            return (false);
        }
