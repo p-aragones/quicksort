@@ -33,7 +33,7 @@ Sort::~Sort()
 
 void Sort::initWindow()
 {
-    _window.create(sf::VideoMode(800, 800), "Sort");
+    _window.create(sf::VideoMode(792, 800), "Sort");
     _window.setFramerateLimit(144);
 }
 
