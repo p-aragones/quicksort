@@ -91,7 +91,7 @@ int Sort::partition (int start, int end)
 
 void Sort::sort(int start, int end)
 {
-    if (start < end) {
+    if (start <= end) {
         int pi = partition(start, end);
         sort(start, pi - 1);
         sort(pi + 1, end);
@@ -105,7 +105,7 @@ bool Sort::isOpen()
 
 void Sort::changePositions()
 {
-    for (int i = 0; i < _values.size() - 1; i++) {
+    for (int i = 0; i < _values.size(); i++) {
         _values[i].setPosition({i * 8, 800});
     }
 }
@@ -113,9 +113,9 @@ void Sort::changePositions()
 bool Sort::isSorted()
 {
     for (int i = 0; i < _values.size() - 1; i++) {
-       if (getValue(_values[i]) > getValue(_values[i + 1])){ 
-           return (false);
-       }
+        if (getValue(_values[i]) > getValue(_values[i + 1])){ 
+            return (false);
+        }
     }
     return (true);
 }
